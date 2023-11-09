@@ -95,8 +95,10 @@ symbole = ""
 for i in range(len(dopasowanie1)):
     if dopasowanie1[i] == dopasowanie2[i]:
         symbole += "*"
-    else:
+    elif dopasowanie1[i] == "-" or dopasowanie2[i] == "-":
         symbole += " "
+    else:
+        symbole += "|"
 
 nazwa_pliku_wynik = nazwa_pliku[:-6] + "_wynik.txt"
 with open(nazwa_pliku_wynik, 'w') as output_file:
